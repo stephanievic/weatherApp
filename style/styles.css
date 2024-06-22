@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+  
+    background: linear-gradient(150deg, rgba(190, 209, 237), rgb(111, 138, 162), rgb(99, 123, 131));
+}
+
+main{
+    width: 870px;
+}
+
+#search{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 60px;
+}
+
+#search-input{
+    width: 700px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(239, 240, 245);
+}
+
+.search-btn {
+    position: absolute;
+    right: 120px;
+    top: 10px;
+
+    background: none;
+    border: none;
+    color: #27455F;
+    font-size: 18px
+}
+
+#actual-forecast {
+    margin-top: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#actual-city{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px
+}
+
+.city{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 20px;
+    padding: 6px 26px;
+    border-radius: 10px;
+
+    background-color: #27455F;
+    color: #EFF0F5;
+    font-size: 20px;
+}
+
+.city > h1 {
+    font-weight: 500;
+}
+
+.city > i {
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 74px;
+
+    color: #EFF0F5;
+}
+
+.temp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.temp > p {
+    font-size: 46px;
+    font-weight: 800;
+    color: #061c32;
+}
+
+.other-informations {
+    display: flex;
+    flex-direction: row;
+    gap: 74px;
+    margin: 66px 0px;
+}
+
+.box-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 160px;
+    height: 94px;
+    border-radius: 10px;
+
+    background-color: rgba(39, 69, 95, .28);
+}
+
+.box-information > p {
+    color: #041525
+}
+
+.box-information > span {
+    font-weight: 600;
+    color: #EFF0F5;
+}
+
+#daily-forecast {
+    display: flex;
+    flex-direction: column;
+}
+
+#daily-forecast > h2, #favorites > h2 {
+    margin: 36px 0px;
+    font-weight: 300;
+    color: #041525;
+}
+
+.container-forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px;
+}
+
+.day-temp{
+    background-color: rgba(39, 69, 95, .28);
+    width: 118px;
+    height: 145px;
+    border-radius: 10px;
+}
+
+.city-fav {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;    
+    border-radius: 10px;
+    margin-bottom: 40px;
+
+    background-color: rgba(39, 69, 95, .28);
+    color: #EFF0F5;
+}

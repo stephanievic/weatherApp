@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style/styles.css">
+
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+    <main>
+        <div id="search">
+            <input type="text" name="search-inpui" id="search-input" placeholder="Pesquise uma nova cidade">
+            <button class="search-btn">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+
+        <section id='actual-forecast'>
+            <div id="actual-city">
+                <div class="city">
+                    <h1>Caraguatatuba, São Paulo</h1>
+                    <i class="bi bi-star"></i>
+                </div>
+
+                <p>20/06 - 22h13</p>
+            </div>
+
+            <div id="now-temp">
+                <div class="main-information">
+                    <p>Céu Limpo</p>
+
+                    <div class="temp">
+                        <img src="/assets/cloudy_143786.png" alt="cloud image" width="115">
+                        <p>24º</p>
+                    </div>
+                </div>
+
+                <div class="other-informations">
+                    <div class="box-information" id="temp-max">
+                        <p>Temp máx.</p>
+                        <span>29º</span>
+                    </div>
+
+                    <div class="box-information" id="temp-min">
+                        <p>Temp min.</p>
+                        <span>29º</span>
+                    </div>
+
+                    <div class="box-information" id="umidade">
+                        <p>Umidade</p>
+                        <span>29º</span>
+                    </div>
+
+                    <div class="box-information" id="vento">
+                        <p>Vento</p>
+                        <span>29º</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="daily-forecast">
+            <h2>PRÓXIMOS DIAS</h2>
+
+            <div class="container-forecast">
+                <div class="day-temp"> 
+
+                </div>
+
+                <div class="day-temp">
+                
+                </div>
+
+                <div class="day-temp">
+                
+                </div>
+                
+                <div class="day-temp">
+                
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="favorites">
+            <h2>CIDADES FAVORITAS</h2>
+
+            <div class="city-fav">
+                <p>Caraguatatuba, São Paulo</p>
+                <i class="bi bi-star"></i>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
