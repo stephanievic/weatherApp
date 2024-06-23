@@ -11,8 +11,11 @@
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   
     background: linear-gradient(150deg, rgba(190, 209, 237), rgb(111, 138, 162), rgb(99, 123, 131));
+    min-height: 100vh;
 }
 
 main{
@@ -20,10 +23,8 @@ main{
 }
 
 #search{
-    display: flex;
-    justify-content: center;
     position: relative;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 #search-input{
@@ -36,13 +37,14 @@ main{
 
 .search-btn {
     position: absolute;
-    right: 120px;
+    right: 45px;
     top: 10px;
 
     background: none;
     border: none;
     color: #27455F;
-    font-size: 18px
+    font-size: 18px;
+    cursor: pointer;
 }
 
 #actual-forecast {
@@ -93,11 +95,15 @@ main{
     color: #EFF0F5;
 }
 
+.main-information > p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
 .temp {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
 }
 
 .temp > p {
@@ -126,11 +132,12 @@ main{
     background-color: rgba(39, 69, 95, .28);
 }
 
-.box-information > p {
-    color: #041525
+.box-information > p, .day-temp > h3 {
+    color: #041525;
+    font-weight: 600;
 }
 
-.box-information > span {
+.box-information > span, .day-temp > span {
     font-weight: 600;
     color: #EFF0F5;
 }
@@ -157,6 +164,10 @@ main{
     width: 118px;
     height: 145px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .city-fav {
@@ -168,4 +179,8 @@ main{
 
     background-color: rgba(39, 69, 95, .28);
     color: #EFF0F5;
+}
+
+.container-toggle{
+    display: none;
 }
