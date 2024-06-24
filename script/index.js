@@ -30,6 +30,8 @@ function getActualForecast (cityName) {
                     wind: data.wind.speed
                 })  
             })
+    
+    document.querySelector('#search-input').value = '';
 }
 
 function showActualForecast (data) {
@@ -50,11 +52,10 @@ function showActualForecast (data) {
     document.querySelector('#umidade').querySelector('span').textContent = `${data.humidity}%`
 
     document.querySelector('#vento').querySelector('span').textContent = `${data.wind} km/h`
-
     
 }
 
-// segundo endpoint: temperatura das proximas horas na cidade
+//temperatura das proximas horas na cidade
 function getDailyForecast (cityName) {
     const apiKey = '5eeb8c8921ffebe37450927019b3dd8f';
 
@@ -68,7 +69,6 @@ function getDailyForecast (cityName) {
             return data.json(); 
         })
         .then((data) => {
-            //console.log(data.list)
             dailyForecast (data)
         })
 }
@@ -91,19 +91,20 @@ function dailyForecast (data) {
 function addFavorites (city) {
     const divFavorites = document.getElementById('favorites')
 
-    let divCityFavorite = document.createElement('div');
+    const divCityFavorite = document.createElement('div');
     divCityFavorite.classList.add('city-fav');
     divCityFavorite.id = city;
-    divFavoritesID = divCityFavorite.id;
+    divCityFavorite.addEventListener('click', (e) => {getActualForecast(city); getDailyForecast(city)})
 
     const favoriteCity = document.createElement('p')
     favoriteCity.textContent = city;
     divCityFavorite.appendChild(favoriteCity)
 
-    const iconFav = document.createElement('i')
-    iconFav.classList.add('remove-fav', 'bi', 'bi-star-fill')
+    const iconFav = document.createElement('i');
+    iconFav.classList.add('remove-fav', 'bi', 'bi-star-fill');
+    iconFav.style.cursor = 'pointer'; 
     iconFav.addEventListener('click', () => {removeFavorites(city);});
-    divCityFavorite.appendChild(iconFav)
+    divCityFavorite.appendChild(iconFav);
 
     divFavorites.appendChild(divCityFavorite)
 }
@@ -130,11 +131,4 @@ iconAddFav.addEventListener('click', (e) => {
 
     addFavorites(city)
 })
-
-/*iconRemoveFav.addEventListener("click", (e) => {
-    const divParent = iconRemoveFav.parentElement.id;
-    console.log(divParent)
-
-    removeFavorites(divParent)
-})*/
 
