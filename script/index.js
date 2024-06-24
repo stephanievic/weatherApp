@@ -103,14 +103,11 @@ function addFavorites (city) {
         divCityFavorite.classList.add('city-fav');
         divCityFavorite.id = city;
         divCityFavorite.style.cursor = 'pointer'; 
-        divCityFavorite.addEventListener('click', (e) => {
-            getActualForecast(city); 
-            getDailyForecast(city); 
-            document.documentElement.scrollTop = 0
-        });
+        divCityFavorite.addEventListener('click', (e) => {document.documentElement.scrollTop = 0});
     
         const favoriteCity = document.createElement('p');
         favoriteCity.textContent = city;
+        favoriteCity.addEventListener("click", () => { getActualForecast(city); getDailyForecast(city)})
         divCityFavorite.appendChild(favoriteCity);
     
         const iconFav = document.createElement('i');
